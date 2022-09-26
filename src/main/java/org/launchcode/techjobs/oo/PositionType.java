@@ -2,7 +2,7 @@ package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
-public class PositionType {
+public class PositionType extends JobField {
 
     private int id;
     private static int nextId = 1;
@@ -20,17 +20,15 @@ public class PositionType {
 
     @Override
     public String toString() {
-        return "PositionType{" +
-                "value='" + value + '\'' +
-                '}';
+        return value;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        PositionType that = (PositionType) o;
-        return id == that.id;
+        if (!(o instanceof PositionType)) return false;
+        PositionType positionType = (PositionType) o;
+        return getId() == positionType.getId();
     }
 
     @Override
