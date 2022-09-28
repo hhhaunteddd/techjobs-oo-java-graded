@@ -37,7 +37,7 @@ public class Job {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(getId());
     }
 
     public int getId() {
@@ -82,6 +82,35 @@ public class Job {
 
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
+    }
+
+    @Override
+    public String toString() {
+        if(getName().equals("")){
+            this.name = "Data not available";
+        }
+
+        if(getEmployer().getValue().equals("")){
+            this.employer.setValue("Data not available");
+        }
+
+        if(getLocation().getValue().equals("")){
+            this.location.setValue("Data not available");
+        }
+
+        if(getPositionType().getValue().equals("")){
+            this.positionType.setValue("Data not available");
+        }
+
+        if(getCoreCompetency().getValue().equals("")){
+            this.coreCompetency.setValue("Data not available");
+        }
+
+        return "\nID: " + this.getId() + "\nName: " + this.name +
+                "\nEmployer: " + this.employer +
+                "\nLocation: " + this.location +
+                "\nPosition Type: " + this.positionType +
+                "\nCore Competency: " + this.coreCompetency + "\n";
     }
 
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the

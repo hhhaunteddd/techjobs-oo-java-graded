@@ -19,7 +19,7 @@ public abstract class JobField {
 
     @Override
     public String toString() {
-        return this.value;
+        return value;
     }
 
     @Override
