@@ -32,7 +32,7 @@ public abstract class JobField {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId());
+        return Objects.hash(id);
     }
 
     public int getId() {

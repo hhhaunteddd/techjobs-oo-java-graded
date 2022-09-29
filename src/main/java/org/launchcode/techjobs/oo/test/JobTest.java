@@ -14,29 +14,29 @@ public class JobTest {
 
     @Test
     public void testSettingJobId() {
-        Job aJob = new Job();
-        Job anotherJob = new Job();
-        assertNotEquals(aJob.getId(), anotherJob.getId());
+        Job job1 = new Job();
+        Job job2 = new Job();
+        assertNotEquals(job1.getId(), job2.getId());
     }
 
     @Test
     public void testJobConstructorSetsAllFields() {
-        Job aJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
-        assertTrue(aJob.getName() instanceof String);
-        assertEquals("Product tester", aJob.getName());
+        assertTrue(job.getName() instanceof String);
+        assertEquals("Product tester", job.getName());
 
-        assertTrue(aJob.getEmployer() instanceof Employer);
-        assertEquals("ACME", aJob.getEmployer().getValue());
+        assertTrue(job.getEmployer() instanceof Employer);
+        assertEquals("ACME", job.getEmployer().getValue());
 
-        assertTrue(aJob.getLocation() instanceof Location);
-        assertEquals("Desert", aJob.getLocation().getValue());
+        assertTrue(job.getLocation() instanceof Location);
+        assertEquals("Desert", job.getLocation().getValue());
 
-        assertTrue(aJob.getPositionType() instanceof PositionType);
-        assertEquals("Quality control", aJob.getPositionType().getValue());
+        assertTrue(job.getPositionType() instanceof PositionType);
+        assertEquals("Quality control", job.getPositionType().getValue());
 
-        assertTrue(aJob.getCoreCompetency() instanceof CoreCompetency);
-        assertEquals("Persistence", aJob.getCoreCompetency().getValue());
+        assertTrue(job.getCoreCompetency() instanceof CoreCompetency);
+        assertEquals("Persistence", job.getCoreCompetency().getValue());
     }
 
     @Test

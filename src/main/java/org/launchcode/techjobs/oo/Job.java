@@ -37,7 +37,7 @@ public class Job {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId());
+        return Objects.hash(id);
     }
 
     public int getId() {
@@ -106,7 +106,7 @@ public class Job {
             this.coreCompetency.setValue("Data not available");
         }
 
-        return "\nID: " + this.getId() + "\nName: " + this.name +
+        return "\nID: " + this.id + "\nName: " + this.name +
                 "\nEmployer: " + this.employer +
                 "\nLocation: " + this.location +
                 "\nPosition Type: " + this.positionType +
